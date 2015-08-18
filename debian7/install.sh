@@ -22,7 +22,7 @@ then
 	echo "Le panel est déjà installé !"
 else
 	# Installation du coeur
-	wget https://raw.githubusercontent.com/samas92i/panelsks/master/debian7/files/core.sh --no-check-certificate
+	wget https://raw.githubusercontent.com/samas92i/panel-remote/master/debian7/files/core.sh --no-check-certificate
 	chmod u+x core.sh
 	./core.sh
 
@@ -31,7 +31,7 @@ else
 	read -p "Installer SteamCMD ? (y/n): " steamcmd
 	if [[ "$steamcmd" == "y" || "$steamcmd" == "yes" || "$steamcmd" == "Y" ]]
     then
-		wget https://raw.githubusercontent.com/samas92i/panelsks/master/debian7/files/steamcmd.sh --no-check-certificate
+		wget https://raw.githubusercontent.com/samas92i/panel-remote/master/debian7/files/steamcmd.sh --no-check-certificate
 		chmod u+x steamcmd.sh
 		./steamcmd.sh
     fi
@@ -41,7 +41,7 @@ else
 	read -p "Installer Java 7 ? (y/n): " java
 	if [[ "$java" == "y" || "$java" == "yes" || "$java" == "Y" ]]
     then
-		wget https://raw.githubusercontent.com/samas92i/panelsks/master/debian7/files/java.sh --no-check-certificate
+		wget https://raw.githubusercontent.com/samas92i/panel-remote/master/debian7/files/java.sh --no-check-certificate
 		chmod u+x java.sh
 		./java.sh
     fi
@@ -51,7 +51,7 @@ else
 	read -p "Installer le serveur FTP? (y/n): " ftp
 	if [[ "$ftp" == "y" || "$ftp" == "yes" || "$ftp" == "Y" ]]
     then
-		wget https://raw.githubusercontent.com/samas92i/panelsks/master/debian7/files/pure-ftpd.sh --no-check-certificate
+		wget https://raw.githubusercontent.com/samas92i/panel-remote/master/debian7/files/pure-ftpd.sh --no-check-certificate
 		chmod u+x pure-ftpd.sh
 		./pure-ftpd.sh
     fi
@@ -61,7 +61,7 @@ else
 	read -p "Installer le serveur Web? (y/n): " web
 	if [[ "$web" == "y" || "$web" == "yes" || "$web" == "Y" ]]
     then
-		wget https://raw.githubusercontent.com/samas92i/panelsks/master/debian7/files/web.sh --no-check-certificate
+		wget https://raw.githubusercontent.com/samas92i/panel-remote/master/debian7/files/web.sh --no-check-certificate
 		chmod u+x web.sh
 		./web.sh
     fi

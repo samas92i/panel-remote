@@ -80,7 +80,7 @@ else
 
 	# Récuperation du .sql
 	cd /tmp
-	wget https://raw.githubusercontent.com/samas92i/panelsks/master/install.sql --no-check-certificate
+	wget https://github.com/samas92i/panel-remote/raw/master/ressources/install.sql --no-check-certificate
 	mysql -u root -p"$rootmysql" -e 'CREATE DATABASE IF NOT EXISTS '"$bdd"'; GRANT ALL PRIVILEGES ON '"$bdd"'.* TO "'"$username"'"@"%" IDENTIFIED BY "'"$password"'"; GRANT ALL PRIVILEGES ON '"$bdd"'.* TO "'"$username"'"@"'"$ip"'" IDENTIFIED BY "'"$password"'"; GRANT ALL PRIVILEGES ON '"$bdd"'.* TO "'"$username"'"@"localhost" IDENTIFIED BY "'"$password"'";'
 	mysql -u root -p"$rootmysql" "$bdd" < /tmp/install.sql
 
@@ -90,7 +90,7 @@ else
 
 	# Fichier de config
 	cd /tmp
-	wget https://raw.githubusercontent.com/samas92i/panelsks/master/mysql.conf --no-check-certificate
+	wget https://raw.githubusercontent.com/samas92i/panel-remote/master/ressources/mysql.conf --no-check-certificate
 	rm /etc/pure-ftpd/db/mysql.conf && mv mysql.conf /etc/pure-ftpd/db/mysql.conf
 	sed -i "s/MYSQLPassword.*/MYSQLPassword $password /g" /etc/pure-ftpd/db/mysql.conf
 	sed -i "s/MYSQLPort.*/MYSQLPort $portmysql /g" /etc/pure-ftpd/db/mysql.conf

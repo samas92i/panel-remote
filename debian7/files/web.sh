@@ -106,14 +106,14 @@ else
 	if [[ "$phpmyadmin" == "y" || "$phpmyadmin" == "yes" || "$phpmyadmin" == "Y" ]]
     then
     	cd /tmp
-		wget https://github.com/samas92i/panelsks/raw/master/ressources/phpmyadmin.tar.gz --no-check-certificate
+		wget https://github.com/samas92i/panel-remote/raw/master/ressources/phpmyadmin.tar.gz --no-check-certificate
 		tar -xvzf phpmyadmin.tar.gz
 		rm phpmyadmin.tar.gz
 		mv phpmyadmin /var/www
     fi
     # Page PanelSKS
 	cd /tmp
-    wget https://raw.githubusercontent.com/samas92i/panelsks/master/index.html --no-check-certificate
+    wget https://github.com/samas92i/panel-remote/raw/master/ressources/index.html --no-check-certificate
     mv index.html /var/www
 
     echo ""
